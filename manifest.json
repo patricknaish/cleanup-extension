@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+
+  "name": "Sold Item Cleanup",
+  "description": "This extension cleans up sold items on Facebook buy/sell groups",
+  "version": "1.0",
+  "author": "Patrick Naish",
+
+  "icons": { 
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "https://www.facebook.com/*"
+  ]
+}
