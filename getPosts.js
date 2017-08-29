@@ -24,7 +24,7 @@ function processNextTab(i) {
         }
 
         if (currentId !== 0) {
-            // Restore the original tab (mostly for Firefo'x"'s benefit)
+            // Restore the original tab (mostly for Firefox's benefit)
             chrome.tabs.update(currentId, {
                 active: true
             });
