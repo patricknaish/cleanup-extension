@@ -23,14 +23,14 @@ function getPostIds() {
     for (i = 0; i < initialPosts.length; i += 1) {
         titleDiv = initialPosts[i].children[0].children[1].children[0];
         // Check for (SOLD) before item name, to avoid accidentally deleting other stuff!
-        soldText = titleDiv.children[0].children[0].children[0].innerText.toUpperCase();
-        if (soldText === "(SOLD)") {
+        // soldText = titleDiv.children[0].children[0].children[0].innerText.toUpperCase();
+        // if (soldText === "(SOLD)") {
             // Get the href from the A tag wrapping the item title
             href = titleDiv.children[0].href;
             post = href.split("?sale_post_id=")[1];
             group = href.split("/groups/")[1].split("/permalink/")[0];
             combinedIds.push(group + "_" + post);
-        }
+        // }
     }
 
     // Now iterate over the remaining items
@@ -38,14 +38,14 @@ function getPostIds() {
     for (i = 1; i < otherPosts.length; i += 1) {
         titleDiv = otherPosts[i].children[0].children[1].children[0];
         // Check for (SOLD) before item name, to avoid accidentally deleting other stuff!
-        soldText = titleDiv.children[0].children[0].children[0].innerText.toUpperCase();
-        if (soldText === "(SOLD)") {
+        // soldText = titleDiv.children[0].children[0].children[0].innerText.toUpperCase();
+        // if (soldText === "(SOLD)") {
             // Get the href from the A tag wrapping the item title
             href = titleDiv.children[0].href;
             post = href.split("?sale_post_id=")[1];
             group = href.split("/groups/")[1].split("/permalink/")[0];
             combinedIds.push(group + "_" + post);
-        }
+        // }
     }
 }
 
